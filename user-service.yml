@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.77:5433/user_db
+    username: postgres
+    password: postgres
+
+  kafka:
+    bootstrap-servers: 192.168.1.77:9092
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.77:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
