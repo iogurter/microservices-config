@@ -11,14 +11,11 @@ server:
   port: 8088
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.1.77:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-
   instance:
-    prefer-ip-address: true
+    hostname: ${app.host}
+    prefer-ip-address: false
+    non-secure-port-enabled: true
+    non-secure-port: ${server.port}
 
 management:
   endpoints:

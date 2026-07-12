@@ -1,0 +1,17 @@
+app:
+  host: microservices.lab
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${app.host}:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    root: INFO

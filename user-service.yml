@@ -11,12 +11,8 @@ server:
   port: 8081
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.1.77:8761/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+  instance:
+    hostname: ${app.host}
+    prefer-ip-address: false
+    non-secure-port-enabled: true
+    non-secure-port: ${server.port}
