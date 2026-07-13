@@ -11,8 +11,18 @@ eureka:
     service-url:
       defaultZone: http://eureka-server:8761/eureka/
 
-  instance:
+instance:
     prefer-ip-address: false
+
+    hostname: 192.168.1.77
+
+    non-secure-port-enabled: true
+    non-secure-port: ${server.port}
+
+    status-page-url: http://192.168.1.77:${server.port}/actuator/info
+
+    health-check-url: http://192.168.1.77:${server.port}/actuator/health
+
 
 management:
   endpoints:
