@@ -10,13 +10,6 @@ spring:
 server:
   port: 8088
 
-eureka:
-  instance:
-    hostname: ${app.host}
-    prefer-ip-address: false
-    non-secure-port-enabled: true
-    non-secure-port: ${server.port}
-
 management:
   endpoints:
     web:

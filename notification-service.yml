@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: 192.168.1.77:9092
+    bootstrap-servers: kafka:9092
 
     consumer:
       group-id: notification-group-v2
@@ -24,13 +24,6 @@ spring:
 
 server:
   port: 8082
-
-eureka:
-  instance:
-    hostname: ${app.host}
-    prefer-ip-address: false
-    non-secure-port-enabled: true
-    non-secure-port: ${server.port}
 
 management:
   endpoints:

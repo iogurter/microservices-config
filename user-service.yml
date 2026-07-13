@@ -1,18 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.1.77:5433/user_db
+    url: jdbc:postgresql://postgres:5432/user_db
     username: postgres
     password: postgres
 
   kafka:
-    bootstrap-servers: 192.168.1.77:9092
+    bootstrap-servers: kafka:9092
 
 server:
   port: 8081
-
-eureka:
-  instance:
-    hostname: ${app.host}
-    prefer-ip-address: false
-    non-secure-port-enabled: true
-    non-secure-port: ${server.port}
