@@ -30,3 +30,9 @@ management:
     web:
       exposure:
         include: health,info,env
+
+info:
+  app:
+    name: Notification Service
+    description: Kafka consumer
+    version: 1.0.0

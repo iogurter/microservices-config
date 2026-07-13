@@ -33,3 +33,7 @@ management:
 logging:
   level:
     root: INFO
+
+info:
+  company: Microservices Lab
+  environment: dev
