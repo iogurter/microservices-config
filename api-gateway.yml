@@ -16,6 +16,11 @@ management:
       exposure:
         include: health,info,env
 
+  endpoint:
+    gateway:
+      access: unrestricted
+
+
 info:
   app:
     name: API Gateway
